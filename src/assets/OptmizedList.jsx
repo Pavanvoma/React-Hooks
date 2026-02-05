@@ -5,10 +5,10 @@ export default function OptimizedList() {
      
  const numbers = useMemo(()=>{
     console.log("Generating numbers...");
-    return Array.from({lengtj:100000}, (_, i)=>i);
+    return Array.from({length:100000}, (_, i)=>i);
  }, []);
- const filitered = useMemo(
-    ()=> numbers.filter(n=>n.tostring().includes(search)),
+ const filgittered = useMemo(
+    ()=> numbers.filter(n=>n.toString().includes(search)),
     [search, numbers]
  );
  const increment = useCallback(()=> {
@@ -19,7 +19,7 @@ export default function OptimizedList() {
         <h3>Optmizes List</h3>
         <button onClick={increment}> Count:{count}</button>
         <input placeholder="search number" onChange={e=> setSearch(e.target.value)}/>
-        <p> Result:  {filitered.length}</p>
+        <p> Result:  {filtered.length}</p>
     </div>
  );
 
