@@ -7,7 +7,7 @@ export default function OptimizedList() {
     console.log("Generating numbers...");
     return Array.from({length:100000}, (_, i)=>i);
  }, []);
- const filgittered = useMemo(
+ const filtered = useMemo(
     ()=> numbers.filter(n=>n.toString().includes(search)),
     [search, numbers]
  );
@@ -16,7 +16,7 @@ export default function OptimizedList() {
  }, [])
  return (
     <div>
-        <h3>Optmizes List</h3>
+        <h3>Optimized List</h3>
         <button onClick={increment}> Count:{count}</button>
         <input placeholder="search number" onChange={e=> setSearch(e.target.value)}/>
         <p> Result:  {filtered.length}</p>

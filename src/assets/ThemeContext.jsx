@@ -7,7 +7,7 @@ export function ThemeProvider({children}) {
     return(
         <ThemeContext.Provider value = {{dark, setDark}}>
             <div className={dark? "dark bg-gray-900 text-white min-h-screen " : "bg-white text-black min-h-screen"}>
-                {childern}
+                {children}
             </div>
         </ThemeContext.Provider>
     )
